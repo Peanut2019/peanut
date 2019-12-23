@@ -1,66 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        a {
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			img {
+				width: 800px;
+			}
 
-<a href="https://baidu.com" target="_blank">
-    <img class="c1" src="//static/084010-15332568109b5b.jpg"  title="绿色" alt="道路两旁"
-         data-abc='//static/104232-15693793527327.jpg'>
-</a>
+			ul {
+				list-style: none;
+				padding-left: 0px;
+			}
 
-<script type="text/javascript">
-    //选中标签
-    let img = document.querySelector('img')
+			a {
+				text-decoration: none;
+                color:black;
+			}
+			div{
+				display: block;
+			}
 
-    //获取节点属性
-    console.log(img.src)
-    console.log(img.title)
-    console.log(img.getAttribute('alt'))//获取标准属性,也可以获取自定义的属性,更多用于后者.
-    console.log(img.alt)
-    console.log(img.dataset.abc)
-    console.log(img.getAttribute('xxoo'))
+			#big_div {
+				position: absolute;
+			}
 
+			#hed {
+				float: left;
+				display: block;
+				width: 860px;
+			}
 
-    //定时器  轮播
-    setTimeout(function () {
-        img.title = '火妹子'
-        img.alt = '动漫图片'
-        img.src = '102740-1569378460e1eb.jpg'
+			#price {
+				color: red;
+				margin-left: 900px;
+				display: block;
 
-        setTimeout(function () {
-            img.title = '粉色诱惑'
-            img.alt = '动漫图片'
-            img.src = '091124-1568769084c389.jpg'
-            setTimeout(function () {
-                img.title = '寂寞的妹子'
-                img.alt = '动漫图片'
-                img.src = '084010-15332568109b5b.jpg'
-                setTimeout(function () {
-                    img.title = '蓝色'
-                    img.alt = '动漫图片'
-                    img.src = '105346-15693800261100.jpg'
+			}
 
-                    setTimeout(function () {
-                        img.src =105346-15693800261100.jpg
-                        img.title = '落花'
-                        img.alt = '动漫图片'
-                        img.className = 'c2'
-                        img.setAttribute('xxoo', 'i miss you')
+			#price>div:nth-child(1) {
+				padding-top: 100px;
+			}
+
+			#info {
+
+				border-bottom: 1px solid #eaeaea;
+
+			}
+			.clear{
+				clear: both;
+			}
 
 
-                    }, 1000)
-                }, 1000)
-            }, 1000)
-        }, 1000)
-    }, 1000)
-</script>
-</body>
+
+		</style>
+	</head>
+	<body>
+		<div>
+			<div id="hed">
+				<h1>万寿路地铁旁 2号院小区 精装南北通透两居 配置齐全 长租</h1>
+				<img src="084010-15332568109b5b.jpg" alt="">
+				<img src="084010-15332568109b5b.jpg" alt="">
+				<img src="084010-15332568109b5b.jpg" alt="">
+				<img src="084010-15332568109b5b.jpg" alt="">
+				<img src="084010-15332568109b5b.jpg" alt="">
+				<div class="clear"></div>
+			</div>
+
+			<div id="price">
+				<div>
+					<strong><span>7000</span>元/月</strong>
+					<span>押一付三</span>
+				</div>
+
+
+				<div id='info'>
+
+					<div class="info_div">
+						<p>两室一厅</p>
+						<span>中楼层/6层</span>
+					</div>
+
+					<div>
+						<p>精装</p>
+						<span>60m</span>
+					</div>
+
+					<div>
+						<p>南北</p>
+					</div>
+
+				</div>
+
+				<div id="info2">
+					<ul>
+						<li>
+							<span>小区:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+						<li>
+							<span>楼型:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+						<li>
+							<span>供暖:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+						<li>
+							<span>出租方式:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+						<li>
+							<span>看房时间:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+						<li>
+							<span>区域:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+						<li>
+							<span>户型结构:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+						<li>
+							<span>中介费:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+						<li>
+							<span>地铁:</span>
+							<a href="xxxx">xxxx</a>
+						</li>
+					</ul>
+
+				</div>
+				<div id="mediator">
+					<p>介绍人:xxx</p>
+					电话:<label>xx11111</label>
+				</div>
+				<div>
+					<h3>交通</h3>
+					<p>交通</p>
+					<p>交通</p>
+					<p>交通</p>
+				</div>
+				<div>
+					<h3>物业</h3>
+					<p>物业</p>
+				</div>
+
+			</div>
+		</div>
+	</body>
 </html>
