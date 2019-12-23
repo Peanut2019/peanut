@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<a href="https://baidu.com" target="_blank">
+    <img class="c1" src="//static/084010-15332568109b5b.jpg"  title="绿色" alt="道路两旁"
+         data-abc='//static/104232-15693793527327.jpg'>
+</a>
+
+<script type="text/javascript">
+    //选中标签
+    let img = document.querySelector('img')
+
+    //获取节点属性
+    console.log(img.src)
+    console.log(img.title)
+    console.log(img.getAttribute('alt'))//获取标准属性,也可以获取自定义的属性,更多用于后者.
+    console.log(img.alt)
+    console.log(img.dataset.abc)
+    console.log(img.getAttribute('xxoo'))
+
+
+    //定时器  轮播
+    setTimeout(function () {
+        img.title = '火妹子'
+        img.alt = '动漫图片'
+        img.src = '102740-1569378460e1eb.jpg'
+
+        setTimeout(function () {
+            img.title = '粉色诱惑'
+            img.alt = '动漫图片'
+            img.src = '091124-1568769084c389.jpg'
+            setTimeout(function () {
+                img.title = '寂寞的妹子'
+                img.alt = '动漫图片'
+                img.src = '084010-15332568109b5b.jpg'
+                setTimeout(function () {
+                    img.title = '蓝色'
+                    img.alt = '动漫图片'
+                    img.src = '105346-15693800261100.jpg'
+
+                    setTimeout(function () {
+                        img.src =105346-15693800261100.jpg
+                        img.title = '落花'
+                        img.alt = '动漫图片'
+                        img.className = 'c2'
+                        img.setAttribute('xxoo', 'i miss you')
+
+
+                    }, 1000)
+                }, 1000)
+            }, 1000)
+        }, 1000)
+    }, 1000)
+</script>
+</body>
+</html>
