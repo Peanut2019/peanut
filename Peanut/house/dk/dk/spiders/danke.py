@@ -12,7 +12,7 @@ class DankeSpider(scrapy.Spider):
         url = url[:12]
         # print(len(url))#所有区的url
         for i in url:
-            for b in range(1,2):
+            for b in range(1,10):
                 # print(b)
                 hos_url = i+'?page={}'.format(b)
                 # print(hos_url)
@@ -36,7 +36,8 @@ class DankeSpider(scrapy.Spider):
         # pass
         print('-----------------------------------------')
         print(response.url)
-        district = response.xpath("//div[@class='detail-roombox']//a/text()").getall()
+        district = response.xpath("//div[@class='detail-roombox']//a/text()")[0].getall()
+        print(district)
         district = ''.join(district)
         print(district)
         item['district'] = district

@@ -7,19 +7,19 @@
 
 # from scrapy.pipelines.images import ImagesPipeline
 from scrapy import Request
-from dk.items import DkItem
+from zk.items import ZkItem
 from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-import pymysql
-class DkPipeline(object):
-    def process_item(self, item, spider):
-        return item
-class DankePipeline(object):
-    def get_media_requests(self, item, info):
-        if isinstance(item, DkItem):
-            yield Request(item['url'])
+# import pymysql
+# class DkPipeline(object):
+#     def process_item(self, item, spider):
+#         return item
+# class DankePipeline(object):
+#     def get_media_requests(self, item, info):
+#         if isinstance(item, ZkItem):
+#             yield Request(item['url'])
 
 
 url = "mysql+pymysql://root:123456@127.0.0.1:3306/pythonclass?charset=utf8mb4"
@@ -41,7 +41,7 @@ class WlcbCloudPipeline(object):
         self.SessionClass = sessionmaker(bind=engine)  # 利用工厂模式获取SessionClass
         self.session_obj = self.SessionClass()  # 创建session对象,此时已绑定数据库引擎，但是未关联任何的对象模型
 
-        self.User_table = Table("bjdanke", metadata, autoload=True)  #  autoload=True这个是关键
+        self.User_table = Table("bj5i5j", metadata, autoload=True)  #  autoload=True这个是关键
 
     def process_item(self, item, spider):
         self.session_obj.execute(self.User_table.insert(), [item])  # item是{"id":1,"name":"xxx"}

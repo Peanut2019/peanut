@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for dk project
+# Scrapy settings for zk project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'dk'
+BOT_NAME = 'zk'
 
-SPIDER_MODULES = ['dk.spiders']
-NEWSPIDER_MODULE = 'dk.spiders'
+SPIDER_MODULES = ['zk.spiders']
+NEWSPIDER_MODULE = 'zk.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'dk (+http://www.yourdomain.com)'
+#USER_AGENT = 'zk (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -27,7 +27,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 6
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -47,13 +47,13 @@ DOWNLOAD_DELAY = 6
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'dk.middlewares.DkSpiderMiddleware': 543,
+#    'zk.middlewares.ZkSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'dk.middlewares.DkDownloaderMiddleware': 543,
+#    'zk.middlewares.ZkDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,16 +65,12 @@ DOWNLOAD_DELAY = 6
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   # 'dk.pipelines.DkPipeline': 300,
-   # 'dk.pipelines.DankePipeline': 301,
-   'dk.pipelines.WlcbCloudPipeline': 302,
-   # 'dk.pipelines.LvyouPipeline': 302,
+   'zk.pipelines.WlcbCloudPipeline': 300,
 }
-IMAGES_STORE = 'D:\python\pachong\s1218\dk\dk'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-#AUTOTHROTTLE_ENABLED = True`
+#AUTOTHROTTLE_ENABLED = True
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
@@ -92,4 +88,3 @@ IMAGES_STORE = 'D:\python\pachong\s1218\dk\dk'
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-FEED_EXPORT_ENCODING =  'UTF8'
