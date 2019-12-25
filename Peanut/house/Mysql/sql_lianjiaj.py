@@ -10,47 +10,40 @@ db = SQLAlchemy(app)
 
 
 # 花生网
-class Bj5i5j(db.Model):
-    __tablename__ = 'Bj5i5j'
+class bjlianjia(db.Model):
+    __tablename__ = 'bjlianjia'
     id = db.Column(db.Integer, primary_key=True)
     district = db.Column(db.String(20), nullable=False)  # 区
-    house = db.Column(db.String(20), nullable=False)  # 房子位置
+    house = db.Column(db.String(200), nullable=False)  # 房子位置
     monthly = db.Column(db.Integer, nullable=False)  # 月租 int
-    house_info = db.Column(db.String(80), nullable=False)  # 房子信息
+    house_info = db.Column(db.String(200), nullable=False)  # 房子信息
     agent = db.Column(db.String(20), nullable=False)  # 房产经纪人
-    imgs = db.Column(db.String(80), nullable=False)  # 房间图片
-    traffic = db.Column(db.String(80), nullable=False)  # 交通
-    property_fee = db.Column(db.String(20), nullable=False)  # 物业费
+    imgs = db.Column(db.String(800), nullable=False)  # 房间图片
+    
 
-    def __init__(self, district, house, monthly, house_info, agent, imgs, traffic, property_fee):
+    def __init__(self, district, house, monthly, house_info, agent, imgs):
         self.district = district
         self.house = house
         self.monthly = monthly
         self.house_info = house_info
         self.agent = agent
         self.imgs = imgs
-        self.traffic = traffic
-        self.property_fee = property_fee
 
 
 # 创建表(全部)
-db.create_all()
+# db.create_all()
 
 
 # db.drop_all()
 
 # 添加数据
-def add_house(district, house, monthly, house_info, agent, imgs, traffic, property_fee):
-    res = Bj5i5j(district, house, monthly, house_info, agent, imgs, traffic, property_fee)
+def add_house(district, house, monthly, house_info, agent, imgs):
+    res = Bj5i5j(district, house, monthly, house_info, agent, imgs)
     # print(res)
     db.session.add(res)
     db.session.commit()
     return True
 
-
-# print(add_house('朝阳', '双桥某小区3居室主卧', 1900, '呼呼呼', '程雷18519314699', '急急急', '距八通线双桥地铁站A口1618米', '小区物业费1元/平米/月'))
-# print(add_house('海淀', '中关村某小区3居室主卧', 1800, '呼呼呼', '程雷18519314699', '急急急', '距八通线双桥地铁站A口1618米', '小区物业费1元/平米/月'))
-# print(add_house('海淀', '中关村某小区3居室主卧', 1800, '呼呼呼', '程雷18519314699', '急急急', "['距八通线双桥地铁站A口1618米','ghfdaskghjkfdh']", '小区物业费1元/平米/月'))
 
 
 # 显示全部
