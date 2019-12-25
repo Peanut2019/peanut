@@ -65,10 +65,10 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'fangzi.pipelines.FangziPipeline': 300,
-# }
-
+ITEM_PIPELINES = {
+   'fangzi.pipelines.WlcbCloudPipeline': 300,
+}
+FEED_EXPORT_ENCODING =  'UTF8'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 # AUTOTHROTTLE_ENABLED = True

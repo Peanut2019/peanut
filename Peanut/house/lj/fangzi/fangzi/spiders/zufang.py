@@ -45,7 +45,7 @@ class HouseSpider(scrapy.Spider):
             # break
 
     def info_parse(self, response):
-
+        item = FangziItem()
         title = response.xpath('//div[@class="content clear w1150"]/p/text()').get()
         title = re.sub(r'\s', '', title)  # 标题
         price = response.xpath('//div[@class="content__core"]/div[2]/div/span/text()').get()  # 价格
@@ -59,13 +59,21 @@ class HouseSpider(scrapy.Spider):
         tel = []
         zhongjie_tel = response.xpath('//p[@id="phone1"]/text()').get()
         tel.append(zhongjie_tel)
-        zhongjie = dict(zip(zhongjie_name, tel))  # 中介
+        # zhongjie = dict(zip(zhongjie_name, tel))  # 中介
+        zhongjie = ' '.join(zhongjie_name) +':'+''.join(zhongjie_tel) # 中介
 
         housePhotos = response.xpath('//ul[@id="prefix"]//li/img/@src').getall()  # 图片
+        housePhotos = ' '.join(housePhotos)
         areas = response.meta['item']
-        print(44444444444444444444,areas)
-        item = FangziItem(area=areas, title=title, price=price, house_info=house_info, house_msgss=house_msgss,
-                          zhongjie=zhongjie, housePhotos=housePhotos)
+        # print(44444444444444444444,areas)
+        item['district'] = areas
+        item['house'] = title
+        item['monthly'] = price
+        item['house_info'] = house_msgss
+        item['agent'] = zhongjie
+        item['imgs'] = housePhotos
+        # item = FangziItem(district=areas, house=title, monthly=price, house_info=house_msgss,
+        #                   agent=zhongjie, imgs=housePhotos)
         # print('这是我手打的标志位',title, price, house_info,house_msgss,zhongjie,housePhotos)
         # print('=' * 80)
         yield item
