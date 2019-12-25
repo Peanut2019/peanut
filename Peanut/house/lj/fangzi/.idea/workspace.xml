@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fb21024c-9795-4f1e-b039-30ba6ddc4086" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/fangzi$5i5j_pojie.coverage" NAME="5i5j_pojie Coverage Results" MODIFIED="1577116909169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$imgs.coverage" NAME="imgs Coverage Results" MODIFIED="1576955347750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/imgs_down" />
+    <SUITE FILE_PATH="coverage/fangzi$5i5j.coverage" NAME="5i5j Coverage Results" MODIFIED="1577096783476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$456456.coverage" NAME="456456 Coverage Results" MODIFIED="1576938699813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fangzi$ziru_.coverage" NAME="ziru_ Coverage Results" MODIFIED="1576813305472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$ceshi.coverage" NAME="ceshi Coverage Results" MODIFIED="1576821577220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fangzi$fangtianxia.coverage" NAME="fangtianxia Coverage Results" MODIFIED="1577067164053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$58222.coverage" NAME="58租房222 Coverage Results" MODIFIED="1577181017268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$zufang.coverage" NAME="zufang Coverage Results" MODIFIED="1577242881979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$__1_.coverage" NAME="测试 (1) Coverage Results" MODIFIED="1577100574939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$srat.coverage" NAME="srat Coverage Results" MODIFIED="1577242951610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fangzi$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1576736778412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$58_house.coverage" NAME="58_house Coverage Results" MODIFIED="1577166943476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$.coverage" NAME="测试 Coverage Results" MODIFIED="1577152383489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fangzi$change.coverage" NAME="change Coverage Results" MODIFIED="1576747255538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$request.coverage" NAME="request Coverage Results" MODIFIED="1576807165280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fangzi/spiders" />
+    <SUITE FILE_PATH="coverage/fangzi$2.coverage" NAME="测试2 Coverage Results" MODIFIED="1577192805595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fangzi/spiders/zufang.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+              <folding>
+                <element signature="e#85#98#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fangzi/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fangzi/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="e#195#245#0" expanded="true" />
+                <element signature="e#549#581#0" />
+                <element signature="e#702#748#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fangzi/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <folding>
+                <element signature="n#!!doc" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>222222222222</find>
+      <find>222</find>
+      <find>html</find>
+      <find>这是长网址,</find>
+      <find>111111</find>
+      <find>1111</find>
+      <find>script</find>
+      <find>1000000</find>
+      <find>10000</find>
+      <find>href</find>
+      <find>100000</find>
+      <find>class=&quot;des</find>
+      <find>所有a标签的的</find>
+      <find>house-list</find>
+      <find>class=&quot;house-title&quot;</find>
+      <find>历所有主页面的所有a标签的</find>
+      <find>house-title</find>
+      <find>1</find>
+      <find>\&quot;MinPrice\&quot;:\&quot;</find>
+      <find>&lt;html</find>
+      <find>=====</find>
+      <find>============</find>
+      <find>=================</find>
+      <find>-----</find>
+      <find>价格</find>
+      <find>house\/rentDetail</find>
+      <find>卫价格</find>
+      <find>==================================================</find>
+      <find>延庆</find>
+      <find>##</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/fangzi/spiders/main.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/house.py" />
+        <option value="$PROJECT_DIR$/fangzi/main.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/__init__.py" />
+        <option value="$PROJECT_DIR$/fangzi/house1.html.py" />
+        <option value="$PROJECT_DIR$/fangzi/house1.html" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/request爬取.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/change.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/house_index.html" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/request.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/ziru_one.html" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/ziru_.py" />
+        <option value="$PROJECT_DIR$/ceshi.py" />
+        <option value="$PROJECT_DIR$/imgs.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/fangtianxia.html" />
+        <option value="$PROJECT_DIR$/456456.py" />
+        <option value="$PROJECT_DIR$/imgs_down/imgs.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/fangtianxia.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/zhangyan/__init__.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/zhangyan/__init__2.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/zhangyan/num2.py" />
+        <option value="$PROJECT_DIR$/zhangyan/num2.py" />
+        <option value="$PROJECT_DIR$/zhangyan/num1.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/5i5j.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/5i5j_pojie.py" />
+        <option value="$PROJECT_DIR$/fangzi/测试.html" />
+        <option value="$PROJECT_DIR$/测试.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/58网上的.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/58_house.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/58tongcheng.html" />
+        <option value="$PROJECT_DIR$/demo.html" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/测试.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/58租房222.py" />
+        <option value="$PROJECT_DIR$/srat.py" />
+        <option value="$PROJECT_DIR$/测试2.py" />
+        <option value="$PROJECT_DIR$/fangzi/pipelines.py" />
+        <option value="$PROJECT_DIR$/fangzi/settings.py" />
+        <option value="$PROJECT_DIR$/fangzi/items.py" />
+        <option value="$PROJECT_DIR$/fangzi/spiders/zufang.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="340" />
+    <option name="y" value="64" />
+    <option name="width" value="1413" />
+    <option name="height" value="957" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <showMembers Scope="true" />
+      <autoscrollFromSource Scope="true" ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="fangzi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fangzi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fangzi" type="462c0819:PsiDirectoryNode" />
+              <item name="fangzi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fangzi" type="462c0819:PsiDirectoryNode" />
+              <item name="fangzi" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (buxiuse3) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (buxiuse3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="454711690" type="70582d5e:PySkeletonsNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (buxiuse3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="454711690" type="70582d5e:PySkeletonsNode" />
+              <item name="lxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (buxiuse3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="454711690" type="70582d5e:PySkeletonsNode" />
+              <item name="lxml" type="462c0819:PsiDirectoryNode" />
+              <item name="etree" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="fangzi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="fangzi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="fangzi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="spiders" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="fangzi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="spiders" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="zufang.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="fangzi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="spiders" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="zufang.py" type="8704e2dd:PyFileNode" />
+              <item name="HouseSpider" type="dd8bbb05:PyElementNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="fangzi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="items.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="fangzi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="fangzi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pipelines.py" type="8704e2dd:PyFileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\project__\fangzi\fangzi\spiders" />
+      <recent name="D:\study\project__\fangzi\fangzi\spiders\zhangyan" />
+      <recent name="D:\study\project__\fangzi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\project__\fangzi\fangzi\spiders" />
+      <recent name="D:\study\project__\fangzi" />
+      <recent name="D:\study\project__\fangzi\imgs_down" />
+      <recent name="D:\study\project__\fangzi\fangzi" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.srat">
+    <configuration name="测试" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fangzi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\study\project__\fangzi\测试_不要删.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="测试2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fangzi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/测试2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="58租房222" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fangzi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fangzi/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fangzi/spiders/58租房222.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="58_house" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fangzi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fangzi/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fangzi/spiders/58_house.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="srat" type="PythonConfigurationType" factoryName="Python">
+      <module name="fangzi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/srat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="zufang" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fangzi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fangzi/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fangzi/spiders/zufang.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.zufang" />
+        <item itemvalue="Python.测试2" />
+        <item itemvalue="Python.58租房222" />
+        <item itemvalue="Python.58_house" />
+        <item itemvalue="Python.测试" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb21024c-9795-4f1e-b039-30ba6ddc4086" name="Default Changelist" comment="" />
+      <created>1576735870269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576735870269</updated>
+      <workItem from="1576735873194" duration="11069000" />
+      <workItem from="1576760100199" duration="21824000" />
+      <workItem from="1576927420568" duration="16561000" />
+      <workItem from="1576992979921" duration="1226000" />
+      <workItem from="1577009532008" duration="8641000" />
+      <workItem from="1577027741331" duration="14000" />
+      <workItem from="1577061018169" duration="90588000" />
+      <workItem from="1577233973379" duration="7583000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="157506000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <flatten-packages value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="488" y="56" width="1413" height="957" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15458423" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="3" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32932165" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.3066089" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32900944" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.8762136" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.49295774" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18515359" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="3" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32932165" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.33260393" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32932165" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.41028446" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fangzi/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/fangzi/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/house_xq.html" />
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/house_index.html" />
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/you_get/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imgs_down/拇指兔1.jpg" />
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/fangtianxia.html" />
+    <entry file="file://$PROJECT_DIR$/imgs_down/imgs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/经纪人.csv" />
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/454711690/lxml/etree/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="222" column="4" selection-start-line="222" selection-start-column="4" selection-end-line="222" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/454711690/lxml/etree/HTMLParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/456456.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhangyan/num2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhangyan/num1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="28" column="57" lean-forward="true" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+          <folding>
+            <element signature="e#61#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../python/data/Lib/abc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="192" selection-start-line="192" selection-end-line="192" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../python/data/Lib/_collections_abc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="847" selection-start-line="847" selection-end-line="847" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/requests/structures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/requests/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="809" selection-start-line="809" selection-end-line="809" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/urllib3/util/retry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="195" selection-start-line="195" selection-end-line="195" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/urllib3/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/urllib3/_collections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/urllib3/poolmanager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="166" selection-start-line="166" selection-end-line="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/requests/adapters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/requests/hooks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/requests/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="248" selection-start-line="248" selection-end-line="248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../python/data/Lib/http/cookiejar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="1206" selection-start-line="1206" selection-end-line="1206" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/requests/cookies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1731">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/requests/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="441" column="36" lean-forward="true" selection-start-line="441" selection-start-column="36" selection-end-line="441" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/5i5j.py" />
+    <entry file="file://$PROJECT_DIR$/fangzi/测试.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="134" column="46" lean-forward="true" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/58网上的.py" />
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/58_house.py" />
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/58tongcheng.html" />
+    <entry file="file://$PROJECT_DIR$/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2097">
+          <caret line="849" lean-forward="true" selection-start-line="849" selection-end-line="849" />
+          <folding>
+            <element signature="e#52#3690#1" expanded="true" />
+            <element signature="e#12749#12755#0" expanded="true" />
+            <element signature="e#12755#12761#0" expanded="true" />
+            <element signature="e#12761#12767#0" expanded="true" />
+            <element signature="e#12767#12773#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#22998#23004#0" expanded="true" />
+            <element signature="e#23004#23010#0" expanded="true" />
+            <element signature="e#23010#23016#0" expanded="true" />
+            <element signature="e#23016#23022#0" expanded="true" />
+            <element signature="e#23694#23700#0" expanded="true" />
+            <element signature="e#23700#23706#0" expanded="true" />
+            <element signature="e#23759#23765#0" expanded="true" />
+            <element signature="e#23765#23771#0" expanded="true" />
+            <element signature="e#23978#23984#0" expanded="true" />
+            <element signature="e#23984#23990#0" expanded="true" />
+            <element signature="e#25429#25435#0" expanded="true" />
+            <element signature="e#25435#25441#0" expanded="true" />
+            <element signature="e#26387#26393#0" expanded="true" />
+            <element signature="e#26393#26399#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#span#1;n#span#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#span#1;n#span#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#30527#30533#0" expanded="true" />
+            <element signature="e#30533#30539#0" expanded="true" />
+            <element signature="e#46203#46209#0" expanded="true" />
+            <element signature="e#46210#46216#0" expanded="true" />
+            <element signature="e#46827#46833#0" expanded="true" />
+            <element signature="e#47027#47033#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/fangtianxia.py" />
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/5i5j_pojie.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/454711690/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="2958" column="8" selection-start-line="2958" selection-start-column="8" selection-end-line="2958" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/测试.py" />
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/58租房222.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="339" column="26" lean-forward="true" selection-start-line="339" selection-start-column="26" selection-end-line="339" selection-end-column="26" />
+          <folding>
+            <element signature="e#4911#5970#0" />
+            <element signature="e#6030#6941#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/测试2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../buxiuse3/venv_dsy/Lib/site-packages/scrapy/item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/测试_不要删.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#640#1477#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#195#245#0" expanded="true" />
+            <element signature="e#549#581#0" />
+            <element signature="e#702#748#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fangzi/spiders/zufang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+          <folding>
+            <element signature="e#85#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
