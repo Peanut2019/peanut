@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>peanut!</title>
+    <style type="text/css">
+        div {
+            display: block;
+
+        }
+
+        .nav_blog {
+            margin-bottom: 0px;
+            height: 20px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            padding: 0px auto;
+
+
+        }
+
+        .nav {
+            border-left-width: 0px;
+            margin: 0 5px 0 0;
+            font-size: 17px;
+            left: 0;
+            z-index: 9;
+            list-style: none;
+            float: left;
+            display: block;
+            width: 100%;
+            background-color: whitesmoke;
+            margin-top: 10px;
+        }
+
+        .navli {
+            width: 25%;
+            margin-right: 0;
+            font-size: 14px;
+            position: relative;
+            float: left;
+            text-align: center;
+            line-height: 20px;
+            display: block;
+            margin-top: 5px;
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .one_li {
+            width: 25%;
+            margin-right: 0;
+            font-size: 14px;
+            position: relative;
+            float: left;
+            text-align: center;
+            line-height: 20px;
+            display: list-item;
+            margin-top: 5px;
+        }
+
+        #home_seek > input {
+        {#width: 100px;#} border: 1px solid #8e99a9;
+            padding: 8px 0 8px 5px;
+            margin-top: 5px;
+
+        }
+
+        .nav2 {
+            margin-top: 30px;
+            background-color: whitesmoke;
+        }
+
+        #info_li {
+            padding: 0 65px 0 85px;
+            list-style: none;
+            position: relative;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .info_div {
+            float: left;
+            display: block;
+            margin: 3px;
+            margin-top: 10px;
+        }
+
+        #info_style {
+            display: block;
+            padding-top: 200px;
+        }
+
+        #info_wawj {
+            display: block;
+            padding-top: 100px;
+        }
+        img{
+            width: 437px;
+            height: 286px;
+        }
+    </style>
+</head>
+<body>
+<div class="nav_blog">
+    <ul class="nav">
+        <li class="navli"><a href="/">首页</a></li>
+        <li class="navli"><a href="/terrace/{{ 'lianjia' }}?terrace='链家'" target="_blank">链家</a></li>
+        <li class="navli"><a href="/terrace/{{ 'zkw' }} ?terrace='租客网'" target="_blank">租客网</a></li>
+        <li class="navli"><a href="/terrace/{{ 'dkgy' }} ?terrace='蛋壳公寓'" target="_blank">蛋壳公寓</a></li>
+    </ul>
+</div>
+{% block content %}
+    <div class="container">
+        {% block page_content %}{% endblock %}
+    </div>
+{% endblock %}
+
+</body>
+</html>

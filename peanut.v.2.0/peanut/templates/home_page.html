@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% extends 'top--1.html' %}
+{% block page_content %} {#page_content 是base.html中自己定义的一个内容块#}
+
+    <div class="nav2">
+        {#    <form action="pageinfo" id="home_seek" method="post">#}
+        <form action="/" method="post">
+            {{ form.csrf_token }} {#跨站请求伪造#}
+            {{ form.title(size = '100') }} {# 搜索框 #}
+            {{ form.submit(size='50') }} {# 按钮 #}
+        </form>
+        <div>
+            <ul class="nav">
+                <li class="one_li"><a href="/region/{{ '朝阳区' }}?district='cy'" target="_blank">朝阳</a></li>
+                <li class="one_li"><a href="/region/{{ '海淀区' }}?district='hd'" target="_blank">海淀</a></li>
+                <li class="one_li"><a href="/region/{{ '东城区' }}?district='hc'" target="_blank">东城</a></li>
+                <li class="one_li"><a href="/region/{{ '西城区' }}?district='xc'" target="_blank">西城</a></li>
+                <li class="one_li"><a href="/region/{{ '丰台区' }}?district='ft'" target="_blank">丰台</a></li>
+                <li class="one_li"><a href="/region/{{ '石景山区' }}?district='sjs'" target="_blank">石景山</a></li>
+                <li class="one_li"><a href="/region/{{ '通州区' }}?district='tz'" target="_blank">通州</a></li>
+                <li class="one_li"><a href="/region/{{ '昌平区' }}?district='cp'" target="_blank">昌平</a></li>
+                <li class="one_li"><a href="/region/{{ '大兴区' }}?district='dx'" target="_blank">大兴</a></li>
+                <li class="one_li"><a href="/region/{{ '亦庄区' }}?district='yz'" target="_blank">亦庄</a></li>
+                <li class="one_li"><a href="/region/{{ '顺义区' }}?district='sy'" target="_blank">顺义</a></li>
+                <li class="one_li"><a href="/region/{{ '房山区' }}?district='fs'" target="_blank">房山</a></li>
+                <li class="one_li"><a href="/region/{{ '门头沟区' }}?district='mtg'" target="_blank">门头沟</a></li>
+                <li class="one_li"><a href="/region/{{ '平谷区' }}?district='pg'" target="_blank">平谷</a></li>
+                <li class="one_li"><a href="/region/{{ '怀柔区' }}?district='hr'" target="_blank">怀柔</a></li>
+                <li class="one_li"><a href="/region/{{ '密云区' }}?district='my'" target="_blank">密云</a></li>
+                <li class="one_li"><a href="/region/{{ '延庆区' }}?district='yq'" target="_blank">延庆</a></li>
+            </ul>
+        </div>
+
+        <div id="info_style">
+            <div style="margin-left: 130px;">
+                <h1>推介房源</h1>
+            </div>
+            <ul id="info_li">
+                {# 链家 #}
+                {% for i in range(3) %}
+
+                    <li>
+                        <div class="info_div">
+                            <a href="/houseinfo/{{ 'sql_lj' }}/{{ lj_houseid[i] }}?house={{ lj_houseinfo[i] }}}"
+                               target="_blank">
+                                <img src={{ images[i] }}>
+                            </a>
+                            <br>
+                            <span>{{ ljhouse[i] }}
+                            <br>
+                            链家房源
+                        </span>
+                        </div>
+                    </li>
+                {% endfor %}
+
+                {# 蛋壳公寓 #}
+                {% for kd_img in range(3) %}
+
+                    <li>
+                        <div class="info_div">
+                            <a href="/houseinfo/{{ 'sql_danke' }}/{{ danke_houseid[kd_img] }}?house={{ danke_houseinfo[kd_img] }}"
+                               target="_blank">
+                                <img src={{ dkimg[kd_img] }}>
+                            </a>
+                            <br>
+                            <span>{{ dankehouse[kd_img] }}
+                            <br>
+                            蛋壳公寓房源
+                        </span>
+                        </div>
+                    </li>
+                {% endfor %}
+                {# 租客网 #}
+                {% for zr in range(3,6) %}
+                    <li>
+                        <div class="info_div">
+                            <a href="/houseinfo/{{ 'sql_zuke' }}/{{ zk_houseid[zr] }}?house={{ zk_houseinfo[zr] }}"
+                               target="_blank">
+                                <img src={{ zrimg[zr] }}>
+                            </a>
+                            <br>
+                            <span>{{ zkhouse[zr] }}
+                            <br>
+                            租客网房源
+                        </span>
+                        </div>
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+{% endblock %}

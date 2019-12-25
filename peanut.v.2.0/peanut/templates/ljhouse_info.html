@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+        ul {
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        div {
+            display: block;
+        }
+
+        #big_div {
+            position: absolute;
+        }
+
+        #hed {
+            float: left;
+            display: block;
+            width: 860px;
+        }
+
+        #price {
+            margin-left: 70px;
+            display: block;
+            margin-top: 200px;
+
+        }
+
+        #price > div:nth-child(1) {
+            padding-top: -100px;
+        }
+
+        #info {
+
+            border-bottom: 1px solid #eaeaea;
+
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #price_div {
+            color: red;
+            font-size: 40px;
+        }
+
+        #show {
+            width: 700px;
+            height: 400px;
+            margin: 100px auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .small {
+            width: 120px;
+            height: 80px;
+        }
+
+        h1 {
+            margin-top: 10px;
+            margin-left: 70px;
+            color: darkorange;
+        }
+
+        body {
+            background-color: #eaeaea;
+        }
+
+    </style>
+</head>
+<body>
+<div style="margin-left:325px ">
+    <div id="hed">
+        <h1>{{ house }}</h1>
+        <div id="show">
+            <img src={{ house_img[0] }}alt="">
+            <div id="d1" style="text-align: center;">
+                <img class="small" src={{ house_img[1] }}>
+                <img class="small" src={{ house_img[2] }}>
+                <img class="small" src={{ house_img[3] }}>
+                <img class="small" src={{ house_img[4] }}>
+                <img class="small" src={{ house_img[5] }}>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <script type="text/javascript">
+            let small = document.querySelectorAll('.small')
+            let pic_arr = [
+                "{{ house_img[1] }}",
+                "{{ house_img[2] }}",
+                "{{ house_img[3] }}",
+                "{{ house_img[4] }}",
+                "{{ house_img[5] }}"
+            ]
+
+
+            let img = document.querySelector('#show>img')
+
+            let i = 0
+            setInterval(function () {
+                img.src = pic_arr[i++]
+                console.log(pic_arr[1])
+                i = i % 4
+            }, 1000)
+
+            let alltd = document.querySelectorAll('td')
+
+            for (let td of alltd) {
+                td.style.background = `rgb(${rand(0, 255)},${rand(0, 255)},${rand(0, 255)})`
+            }
+
+            function rand(m, n) {
+                return Math.floor(Math.random() * (n - m + 1) + m)
+            }
+        </script>
+
+        <div id="price">
+            <div>
+                <div id='price_div'>
+                    <p>{{ house_monthly }} <span>元/月</span>
+                    <p>
+
+                </div>
+                <div id="info2">
+                    <div>
+                        <ul>
+                            <li>
+                                <span>房间信息:</span>
+                                <p>{{ house_info }}</p>
+                            </li>
+                            <li>
+                                <span>经纪人:</span>
+                                <p>{{ house_agent }}</p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div id="mediator">
+                        <div>
+                            <p>入住情况:</p>
+                            <label>{{ '暂无,以现场真实情况为准!' }}</label>
+                        </div>
+                        <div>
+                            <h3>物业</h3>
+                            <p>{{ '暂无' }}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

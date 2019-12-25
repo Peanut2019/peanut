@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'top--1.html' %}
+{% block page_content %} {#page_content 是base.html中自己定义的一个内容块#}
+    <div>
+        <h3>{{ searchs }}</h3>
+        <ul id="info_li">
+            <li>
+                <div class="info_div">
+                    <a href="/houseinfo/{{ 'housetitle' }}" target="_blank"><img
+                            src="http://image2.5i5j.com//group2/M00/CB/73/CgqJNF30okCAEeSyAAHZPVrfscw905.jpg.240x195.jpg">
+                        <br>
+                    </a>
+                    <span>万泉庄新上两居室 急租</span>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+{% endblock %}

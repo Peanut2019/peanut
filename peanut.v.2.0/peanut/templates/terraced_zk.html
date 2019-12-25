@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'top--1.html' %}
+{% block page_content %}
+    <div id="info_wawj">
+        <div style="margin-left: 130px;">
+            <h1>{{ terrace }}房源</h1>
+        </div>
+        <ul id="info_li">
+            {% for img in range(zklen) %}
+                <li>
+                    <div class="info_div">
+                        <a href="/houseinfo/{{ 'sql_zuke' }}/{{ zk_houseid[img] }}?house={{ zk_houseinfo[img] }}"
+                           target="_blank">
+                            <img src={{ zk_images[img] }}>
+                        </a>
+                        <br>
+                        <span>{{ zk_house[img] }}
+                            <br>
+                            蛋壳公寓房源
+                        </span>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+{% endblock %}

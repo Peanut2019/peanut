@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% extends 'top--1.html' %}
+{% block page_content %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ district }}</title>
+        <style>
+            ul {
+                list-style: none;
+            }
+
+            .info_div {
+                float: left;
+                display: block;
+                margin: 3px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>{{ district }}</h1>
+    <h1>{{ searchs  }}</h1>
+    <ul>
+        {% for i in range(30) %}
+
+            <li>
+                <div class="info_div">
+                    <a href="/houseinfo/{{ 'sql_lj' }}/{{ webid[i] }}?house={{ houseinfo[i] }}}"
+                       target="_blank">
+                        <img src={{ images[i] }}>
+                    </a>
+                    <br>
+                    <span>{{ house[i] }}
+                            <br>
+                            链家房源
+                        </span>
+                </div>
+            </li>
+        {% endfor %}
+
+
+        {% for kd_img in range(30) %}
+
+            <li>
+                <div class="info_div">
+                    <a href="/houseinfo/{{ 'sql_danke' }}/{{ webid[kd_img] }}?house={{ houseinfo[kd_img] }}"
+                       target="_blank">
+                        <img src={{ images[kd_img] }}>
+                    </a>
+                    <br>
+                    <span>{{ house[kd_img] }}
+                            <br>
+                            蛋壳公寓房源
+                        </span>
+                </div>
+            </li>
+        {% endfor %}
+
+        {% for zr in range(30) %}
+            <li>
+                <div class="info_div">
+                    <a href="/houseinfo/{{ 'sql_zuke' }}/{{ webid[zr] }}?house={{ houseinfo[zr] }}"
+                       target="_blank">
+                        <img src={{ images[zr] }}>
+                    </a>
+                    <br>
+                    <span>{{ house[zr] }}
+                            <br>
+                            租客网房源
+                        </span>
+                </div>
+            </li>
+
+        {% endfor %}
+    </ul>
+
+    </body>
+    </html>
+{% endblock %}
