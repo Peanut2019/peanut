@@ -1,9 +1,12 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import or_
 from apps import app
+from userfile import *    #数据库信息
 
+users = user()
+app.config['SQLALCHEMY_DATABASE_URI'] = str(users["datatype"]+'://'+users['username']+':'+users['password']+'@'+users['host']+'/'+users['database'])
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:jace666@127.0.0.1/peanut'
+'mysql+mysqlconnector://root:jace666@127.0.0.1/peanut'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -18,6 +21,7 @@ class Bj5i5j(db.Model):
     house_info = db.Column(db.String(1000), nullable=False)  # 房子信息
     agent = db.Column(db.String(1000), nullable=False)  # 房产经纪人
     imgs = db.Column(db.String(1000), nullable=False)  # 房间图片
+
     def __init__(self, district, house, monthly, house_info, agent, imgs):
         self.district = district
         self.house = house
@@ -27,12 +31,10 @@ class Bj5i5j(db.Model):
         self.imgs = imgs
 
 
-
-
 #
 # 添加数据
 def add_house(district, house, monthly, house_info, agent, imgs):
-    res = Bj5i5j(district, house, monthly, house_info, agent, imgs )
+    res = Bj5i5j(district, house, monthly, house_info, agent, imgs)
     # print(res)
     print('5i6j')
     db.session.add(res)
@@ -41,6 +43,8 @@ def add_house(district, house, monthly, house_info, agent, imgs):
 
 
 # db.create_all()
+
+
 # db.drop_all()
 
 # 显示全部
@@ -48,7 +52,8 @@ def query_all():
     res = Bj5i5j.query.all
     return tuple(res())
 
-#查询图片
+
+# 查询图片
 def query_img():
     tuple1 = ()
     res = Bj5i5j.query.all
@@ -56,9 +61,11 @@ def query_img():
         tuple1 += (i.imgs,)
     # print(tuple1)
     return tuple1
+
+
 # query_img()
 # print(query_all())
-#查询位置
+# 查询位置
 def query_house():
     tuple1 = ()
     res = Bj5i5j.query.all
@@ -66,6 +73,8 @@ def query_house():
         tuple1 += (i.house,)
     # print(tuple1)
     return tuple1
+
+
 # query_house()
 def query_houseid():
     tuple1 = ()
@@ -75,7 +84,8 @@ def query_houseid():
     # print(tuple1)
     return tuple1
 
-#房子信息
+
+# 房子信息
 def query_houseinfo():
     tuple1 = ()
     res = Bj5i5j.query.all
@@ -83,10 +93,12 @@ def query_houseinfo():
         tuple1 += (i.house_info,)
     # print(tuple1)
     return tuple1
+
+
 # query_houseinfo()
 
 
-#查月租
+# 查月租
 def query_housemonthly():
     tuple1 = ()
     res = Bj5i5j.query.all
@@ -94,6 +106,7 @@ def query_housemonthly():
         tuple1 += (i.monthly,)
     # print(tuple1)
     return tuple1
+
 
 # 根据 网站 查询
 def query_by_web(web):
@@ -118,7 +131,6 @@ def query_by_id(id):
     # print(type(res))
     if res != []:
         return tuple(res)
-
 
 
 # 模糊查询 小区名
@@ -152,11 +164,6 @@ def query_likeall(input):
         Bj5i5j.monthly.like("%" + input + "%") if input is not None else "",
         Bj5i5j.house_info.like("%" + input + "%") if input is not None else "",
         Bj5i5j.traffic.like("%" + input + "%") if input is not None else "")).all()
-    print(res)
+    # print(res)
     if res != []:
         return tuple(res)
-
-
-
-
-

@@ -11,9 +11,11 @@
                     <div class="info_div">
                         <a href="/houseinfo/{{ 'sql_lj' }}/{{ lj_houseid[img] }}?house={{ lj_houseinfo[img] }}"
                            target="_blank">
-                            <img src={{ lj_images[img] }}></a>
-                            <br>
-                            <span>{{ lj_house[img] }}
+{#                            {{ list(lj_images[img]) }}#}
+                            <img src={{ lj_images[img]}}></a>
+                        {#                            <img src={{ lj_images }}></a>#}
+                        <br>
+                        <span>{{ lj_house[img] }}
                             <br>
                             链家房源
                         </span>

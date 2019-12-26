@@ -18,19 +18,14 @@ def servererror(e):
 # 首页
 @app.route('/', methods=['GET', 'POST'])
 def homepage():
-    imglist = []
     form = peanut_form.MyFrom()
     if request.method == "GET":
-        lj_images = sql_lj.query_img()  #
-        imglist.append(lj_images[0].split(' ')[0])
-        imglist.append(lj_images[10].split(' ')[1])
-        imglist.append(lj_images[3].split(' ')[0])
+        lj_images = sql_lj.query_img()
         lj_house = sql_lj.query_house()  # wz
         lj_houseinfo = sql_lj.query_houseinfo()  # 房子xx
         lj_houseid = sql_lj.query_houseid()  # 房子id
-        # print(lj_houseid, 88888888888888)
         ljlen = len(lj_images)
-        print(imglist,999999999999999999999999999999999999999999)
+
 
         danke_images = sql_danke.query_img()  # 蛋壳公寓图片
         danke_house = sql_danke.query_house()  # 蛋壳公寓房源位置
@@ -44,7 +39,7 @@ def homepage():
         zk_houseid = sql_zuke.query_houseid()  # 查id
         zklen = len(zk_images)
 
-        return render_template('home_page.html', images=imglist, form=form, dkimg=danke_images, zrimg=zk_images,
+        return render_template('home_page.html', images=lj_images, form=form, dkimg=danke_images, zrimg=zk_images,
                                ljhouse=lj_house, dankehouse=danke_house, zkhouse=zk_house,
                                lj_houseinfo=lj_houseinfo, lj_houseid=lj_houseid, danke_houseid=danke_houseid,
                                danke_houseinfo=danke_houseinfo, zk_houseinfo=zk_houseinfo, zk_houseid=zk_houseid,
@@ -133,12 +128,14 @@ def terraces(name):
         lj_house = sql_lj.query_house()  # wz
         lj_houseinfo = sql_lj.query_houseinfo()  # 房子xx
         lj_houseid = sql_lj.query_houseid()  # 房子id
-        ljlen = len(lj_images)
-        liimage = ' '.join(lj_images).split(' ')
+        ljlen = len(lj_house)
+        ljimage = list(lj_images)
 
 
 
-        return render_template('terraced_lj.html', terrace=terrace, lj_images=liimage, lj_house=lj_house,
+
+
+        return render_template('terraced_lj.html', terrace=terrace, lj_images=ljimage, lj_house=lj_house,
                                lj_houseinfo=lj_houseinfo, lj_houseid=lj_houseid, ljlen=ljlen)
 
 
@@ -165,7 +162,6 @@ def regions(district):
 
     zkhome = sql_zuke.query_by_district(district)  # 租客
     if zkhome != None:
-        # print(zkhome,111111111111)
         zklen = len(zkhome)
 
         for le in range(zklen):
@@ -204,9 +200,6 @@ def houseinfo(table, hostid):
     if type(hostid) != str:
         if table == 'sql_lj':
             ljid = sql_lj.query_by_id(hostid)
-
-            print(hostid, '--------------')
-            print(ljid, '****************')
             house = ljid[0].house  # 房子位置
             house_info = ljid[0].house_info  # 房子信息
             house_monthly = ljid[0].monthly  # 月租

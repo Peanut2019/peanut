@@ -33,7 +33,7 @@ class Zkweb(db.Model):
 def add_house(district, house, monthly, house_info, agent, imgs, traffic, property_fee):
     res = Zkweb(district, house, monthly, house_info, agent, imgs, traffic, property_fee)
     # print(res)
-    print('5i6j')
+    # print('5i6j')
     db.session.add(res)
     db.session.commit()
     return True
@@ -154,7 +154,3 @@ def query_likeall(input):
     if res != []:
         return tuple(res)
 
-
-# if __name__ == '__main__':
-#     res = query_likeall('区')
-#     print(res[0].house)

@@ -35,7 +35,7 @@ class Bjdanke(db.Model):
 def add_house(district, house, monthly, house_info, cfg, imgs, traffic, chum):
     res = Bjdanke(district, house, monthly, house_info, cfg, imgs, traffic, chum)
     # print(res)
-    print('danke')
+    # print('danke')
     db.session.add(res)
     db.session.commit()
     return True
@@ -149,11 +149,7 @@ def query_likeall(input):
         Bjdanke.monthly.like("%" + input + "%") if input is not None else "",
         Bjdanke.house_info.like("%" + input + "%") if input is not None else "",
         Bjdanke.traffic.like("%" + input + "%") if input is not None else "")).all()
-    print(res)
+    # print(res)
     if res != []:
         return tuple(res)
 
-# #
-# res = query_by_district('东城区')
-# print(type(res))
-# print(res)
