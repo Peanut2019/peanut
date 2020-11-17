@@ -16,5 +16,4 @@
 
 # Peanut Operation guide
 
-- Run main.py in the crawler folders dk,lj, and zk. Note that you want to modify some of the contents of pipelies
-- The flask framework is in the pennut directory, modify the contents of the userfile, and run index.py
+- 一个 demo
