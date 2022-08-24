@@ -10,10 +10,10 @@ import scrapy
 
 class FangziItem(scrapy.Item):
     area = scrapy.Field()
-    district = scrapy.Field()#区
-    house = scrapy.Field()      # 标题
-    monthly = scrapy.Field()      # 价格
-    house_info = scrapy.Field()     # 房简介
+    district = scrapy.Field()  # 区
+    house = scrapy.Field()  # 标题
+    monthly = scrapy.Field()  # 价格
+    house_info = scrapy.Field()  # 房简介
     # house_msgss = scrapy.Field()    # 房屋信息
-    agent = scrapy.Field()       # 中介
-    imgs = scrapy.Field()    # 房屋imgs
+    agent = scrapy.Field()  # 中介
+    imgs = scrapy.Field()  # 房屋imgs

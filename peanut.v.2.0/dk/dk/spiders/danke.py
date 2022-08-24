@@ -2,8 +2,9 @@
 import scrapy
 from dk.items import DkItem
 
+
 class DankeSpider(scrapy.Spider):
-    name = 'danke'
+    name = 'dk'
     allowed_domains = ['www.danke.com']
     start_urls = ['https://www.danke.com/room/bj/p2500.html']
 
@@ -12,25 +13,27 @@ class DankeSpider(scrapy.Spider):
         url = url[:12]
         # print(len(url))#所有区的url
         for i in url:
-            for b in range(1,10):
+            for b in range(1, 10):
                 # print(b)
-                hos_url = i+'?page={}'.format(b)
+                hos_url = i + '?page={}'.format(b)
                 # print(hos_url)
-                yield scrapy.Request(url=hos_url,callback=self.other_paser)
-    def other_paser(self,response):
+                yield scrapy.Request(url=hos_url, callback=self.other_paser)
+
+    def other_paser(self, response):
         # item = DkItem()
         hou = []
         # print(response.url)
         # print('---------------------------->ok')
-        house_url =response.xpath("//div[@class='r_lbx_cena']/a/@href").getall()
-        house_name =response.xpath("//div[@class='r_lbx_cena']/a/text()").getall()
+        house_url = response.xpath("//div[@class='r_lbx_cena']/a/@href").getall()
+        house_name = response.xpath("//div[@class='r_lbx_cena']/a/text()").getall()
         # print(house_url)
         hou.append(house_url)
 
         for i in hou[0]:
             # print(i)
-            yield scrapy.Request(url=i,callback=self.parse2)
-    def parse2(self,response):
+            yield scrapy.Request(url=i, callback=self.parse2)
+
+    def parse2(self, response):
         item = DkItem()
         item['url'] = response.url
         # pass
@@ -59,7 +62,7 @@ class DankeSpider(scrapy.Spider):
                 house_info = ''.join(hou)
         print(house_info)
         item['house_info'] = house_info
-        cfg =  response.xpath("//tr[2]/td/text()")[:5].getall()
+        cfg = response.xpath("//tr[2]/td/text()")[:5].getall()
         cfg = ' '.join(cfg)
         print(cfg)
         item['cfg'] = cfg

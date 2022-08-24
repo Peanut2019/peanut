@@ -1,12 +1,14 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import or_
-from apps import app
-from userfile import *    #数据库信息
+from peanut.core.apps import app
+from peanut.core.config import config
 
-users = user()
-app.config['SQLALCHEMY_DATABASE_URI'] = str(users["datatype"]+'://'+users['username']+':'+users['password']+'@'+users['host']+'/'+users['database'])
+users = config.DB_CONFIG
+app.config['SQLALCHEMY_DATABASE_URI'] = str(
+    users["datatype"] + '://' + users['username'] + ':' + users['password'] + '@' + users['host'] + '/' + users[
+        'database'])
 
-'mysql+mysqlconnector://root:jace666@127.0.0.1/peanut'
+print(app.config.get("SQLALCHEMY_DATABASE_URI"))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -41,11 +43,6 @@ def add_house(district, house, monthly, house_info, agent, imgs):
     db.session.commit()
     return True
 
-
-# db.create_all()
-
-
-# db.drop_all()
 
 # 显示全部
 def query_all():
@@ -167,3 +164,8 @@ def query_likeall(input):
     # print(res)
     if res != []:
         return tuple(res)
+
+
+if __name__ == '__main__':
+    db.create_all()
+    # db.drop_all()

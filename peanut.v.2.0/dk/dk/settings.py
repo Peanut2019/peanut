@@ -8,6 +8,7 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import os
 
 BOT_NAME = 'dk'
 
@@ -70,7 +71,8 @@ ITEM_PIPELINES = {
    'dk.pipelines.WlcbCloudPipeline': 302,
    # 'dk.pipelines.LvyouPipeline': 302,
 }
-IMAGES_STORE = 'D:\python\pachong\s1218\dk\dk'
+# IMAGES_STORE = 'D:\python\pachong\s1218\dk\dk'
+IMAGES_STORE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'imgs')
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -93,3 +95,7 @@ IMAGES_STORE = 'D:\python\pachong\s1218\dk\dk'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 FEED_EXPORT_ENCODING =  'UTF8'
+
+
+# if __name__ == '__main__':
+#    print(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'imgs'))

@@ -4,5 +4,4 @@
 
 from scrapy import cmdline
 
-# cmdline.execute('scrapy crawl house --nolog'.split())
-cmdline.execute('scrapy crawl lianjia'.split())
+cmdline.execute('scrapy crawl lian_jia'.split())

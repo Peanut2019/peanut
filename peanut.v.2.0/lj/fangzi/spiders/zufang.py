@@ -11,28 +11,28 @@ DATA = []
 
 
 class HouseSpider(scrapy.Spider):
-    name = 'lianjia'  # 爬虫的唯一id
+    name = 'lian_jia'  # 爬虫的唯一id
     # 名字这个字段还没有设置好.
     allowed_domains = ['lianjia.com']
     start_urls = ['https://bj.lianjia.com/zufang/erp3000/']  # 起始的list,或者下面的函数,效果是一样的
 
-    def parse(self, response):
+    def parse(self, response, **kwargs):
         item = FangziItem()
         areas = response.xpath('//ul[@data-target="area"]//li/a/text()').getall()  # 朝阳,延庆...
 
         area_url_list = response.xpath('//ul[@data-target="area"]//li/a/@href').getall()
         area_urls = list(map(lambda url: response.urljoin(url), area_url_list))  # 智能拼str,加上http前缀,哪里没有补哪里
         # print('area的url------>',area_urls)
-        for i in range(1,len(area_urls)):
-            if areas[i] =='亦庄开发区':
+        for i in range(1, len(area_urls)):
+            if areas[i] == '亦庄开发区':
                 item['area'] = areas[i]
                 url = area_urls[i]
             else:
-                item['area'] = areas[i]+'区'
+                item['area'] = areas[i] + '区'
                 url = area_urls[i]
 
             # print(areas[area_urls.index(i)])
-            yield scrapy.Request(url=url, callback=self.detail_parse,meta={'item':item['area']})
+            yield scrapy.Request(url=url, callback=self.detail_parse, meta={'item': item['area']})
             # break
 
     def detail_parse(self, response):
@@ -43,9 +43,9 @@ class HouseSpider(scrapy.Spider):
         # pages = response.xpath('//div[@class="fanye"]/a/@href').getall()
         # pages_url = list(map(lambda url: response.urljoin(url), pages))
         areas = response.meta['item']
-        print(areas,'##########')
+        print(areas, '##########')
         for page_url in houseList_urls:
-            yield scrapy.Request(url=page_url, callback=self.info_parse,meta={'item':areas})
+            yield scrapy.Request(url=page_url, callback=self.info_parse, meta={'item': areas})
             # break
 
     def info_parse(self, response):
@@ -64,7 +64,7 @@ class HouseSpider(scrapy.Spider):
         zhongjie_tel = response.xpath('//p[@id="phone1"]/text()').get()
         tel.append(zhongjie_tel)
         # zhongjie = dict(zip(zhongjie_name, tel))  # 中介
-        zhongjie = ' '.join(zhongjie_name) +':'+''.join(zhongjie_tel) # 中介
+        zhongjie = ' '.join(zhongjie_name) + ':' + ''.join(zhongjie_tel)  # 中介
 
         housePhotos = response.xpath('//ul[@id="prefix"]//li/img/@src').getall()  # 图片
         housePhotos = ' '.join(housePhotos)

@@ -1,5 +1,5 @@
-from flask import render_template, request, url_for, redirect, session, escape
-from apps import app
+from flask import render_template, request, url_for, redirect
+from peanut.core.apps import app
 import sql_lj, peanut_form, sql_zuke, sql_danke
 
 
@@ -25,7 +25,6 @@ def homepage():
         lj_houseinfo = sql_lj.query_houseinfo()  # 房子xx
         lj_houseid = sql_lj.query_houseid()  # 房子id
         ljlen = len(lj_images)
-
 
         danke_images = sql_danke.query_img()  # 蛋壳公寓图片
         danke_house = sql_danke.query_house()  # 蛋壳公寓房源位置
@@ -130,10 +129,6 @@ def terraces(name):
         lj_houseid = sql_lj.query_houseid()  # 房子id
         ljlen = len(lj_house)
         ljimage = list(lj_images)
-
-
-
-
 
         return render_template('terraced_lj.html', terrace=terrace, lj_images=ljimage, lj_house=lj_house,
                                lj_houseinfo=lj_houseinfo, lj_houseid=lj_houseid, ljlen=ljlen)

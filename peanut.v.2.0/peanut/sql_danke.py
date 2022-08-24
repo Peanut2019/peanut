@@ -27,12 +27,6 @@ class Bjdanke(db.Model):
         self.traffic = traffic
 
 
-# 创建表(全部)
-# db.create_all()
-# print('546546')
-
-# db.drop_all()
-
 # 添加数据
 def add_house(district, house, monthly, house_info, cfg, imgs, traffic, chum):
     res = Bjdanke(district, house, monthly, house_info, cfg, imgs, traffic, chum)
@@ -158,3 +152,11 @@ def query_likeall(input):
     # print(res)
     if res != []:
         return tuple(res)
+
+
+if __name__ == '__main__':
+    # 创建表(全部)
+    db.create_all()
+    # print('546546')
+
+    # db.drop_all()

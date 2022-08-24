@@ -2,7 +2,6 @@ from sqlalchemy import or_
 from sql_lj import db
 
 
-
 # 花生网
 class Zkweb(db.Model):
     __tablename__ = 'zk'
@@ -27,7 +26,6 @@ class Zkweb(db.Model):
         self.property_fee = property_fee
 
 
-
 #
 # 添加数据
 def add_house(district, house, monthly, house_info, agent, imgs, traffic, property_fee):
@@ -38,15 +36,14 @@ def add_house(district, house, monthly, house_info, agent, imgs, traffic, proper
     db.session.commit()
     return True
 
-# db.drop_all()
-# db.create_all()
 
 # 显示全部
 def query_all():
     res = Zkweb.query.all
     return tuple(res())
 
-#查询图片
+
+# 查询图片
 def query_img():
     tuple1 = ()
     res = Zkweb.query.all
@@ -54,9 +51,11 @@ def query_img():
         tuple1 += (i.imgs,)
     # print(tuple1)
     return tuple1
+
+
 # query_img()
 # print(query_all())
-#查询位置
+# 查询位置
 def query_house():
     tuple1 = ()
     res = Zkweb.query.all
@@ -64,6 +63,8 @@ def query_house():
         tuple1 += (i.house,)
     # print(tuple1)
     return tuple1
+
+
 # query_house()
 def query_houseid():
     tuple1 = ()
@@ -73,7 +74,8 @@ def query_houseid():
     # print(tuple1)
     return tuple1
 
-#房子信息
+
+# 房子信息
 def query_houseinfo():
     tuple1 = ()
     res = Zkweb.query.all
@@ -81,10 +83,12 @@ def query_houseinfo():
         tuple1 += (i.house_info,)
     # print(tuple1)
     return tuple1
+
+
 # query_houseinfo()
 
 
-#查月租
+# 查月租
 def query_housemonthly():
     tuple1 = ()
     res = Zkweb.query.all
@@ -92,6 +96,7 @@ def query_housemonthly():
         tuple1 += (i.monthly,)
     # print(tuple1)
     return tuple1
+
 
 # 根据 网站 查询
 def query_by_web(web):
@@ -107,6 +112,8 @@ def query_by_district(district):
     # print(type(res))
     if res != []:
         return tuple(res)
+
+
 # print(query_by_district('西城区'))
 #
 # 根据 id 查询
@@ -116,7 +123,6 @@ def query_by_id(id):
     # print(type(res))
     if res != []:
         return tuple(res)
-
 
 
 # 模糊查询 小区名
@@ -154,3 +160,7 @@ def query_likeall(input):
     if res != []:
         return tuple(res)
 
+
+if __name__ == '__main__':
+    # db.drop_all()
+    db.create_all()
