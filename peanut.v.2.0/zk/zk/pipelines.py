@@ -22,7 +22,8 @@ from sqlalchemy.orm import sessionmaker
 #             yield Request(item['url'])
 
 
-url = "mysql+pymysql://username:password@host:port/database?charset=utf8mb4"
+# url = "mysql+pymysql://username:password@host:port/database?charset=utf8mb4"
+url = "mysql+pymysql://root:root@127.0.0.1:3306/peanut?charset=utf8mb4"
 engine = create_engine(url, echo=False, encoding="utf-8")
 Base = declarative_base()
 metadata = MetaData(engine)
@@ -41,12 +42,10 @@ class WlcbCloudPipeline(object):
         self.SessionClass = sessionmaker(bind=engine)  # 利用工厂模式获取SessionClass
         self.session_obj = self.SessionClass()  # 创建session对象,此时已绑定数据库引擎，但是未关联任何的对象模型
 
-        self.User_table = Table("table", metadata, autoload=True)  #  autoload=True这个是关键
+        self.User_table = Table("zk", metadata, autoload=True)  #  autoload=True这个是关键
 
     def process_item(self, item, spider):
         self.session_obj.execute(self.User_table.insert(), [item])  # item是{"id":1,"name":"xxx"}
-        # self.User_table.insert(id=1, name="2")
-        print(987789,item)
         self.session_obj.commit()
 
         return item
