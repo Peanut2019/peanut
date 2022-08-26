@@ -1,6 +1,7 @@
 from flask import render_template, request, url_for, redirect
 from flask.blueprints import Blueprint
-import sql_lj, peanut_form, sql_zuke
+from peanut.forms import peanut_form
+from peanut.models import house
 
 index_bp = Blueprint('index', __name__)
 
@@ -9,16 +10,16 @@ index_bp = Blueprint('index', __name__)
 def homepage():
     form = peanut_form.MyFrom()
     if request.method == "GET":
-        lj_images = sql_lj.query_img()
-        lj_house = sql_lj.query_house()  # wz
-        lj_house_info = sql_lj.query_houseinfo()  # 房子xx
-        lj_house_id = sql_lj.query_houseid()  # 房子id
+        lj_images = house.query_img()
+        lj_house = house.query_house()  # wz
+        lj_house_info = house.query_houseinfo()  # 房子xx
+        lj_house_id = house.query_houseid()  # 房子id
         lj_img_count = len(lj_images)
 
-        zk_images = sql_zuke.query_img()  # 租客网图片
-        zk_house = sql_zuke.query_house()  # 租客网房源位置
-        zk_houseinfo = sql_zuke.query_houseinfo()  # 租客网房信息
-        zk_houseid = sql_zuke.query_houseid()  # 查id
+        zk_images = house.query_img()  # 租客网图片
+        zk_house = house.query_house()  # 租客网房源位置
+        zk_houseinfo = house.query_houseinfo()  # 租客网房信息
+        zk_houseid = house.query_houseid()  # 查id
         zklen = len(zk_images)
 
         return render_template('home_page.html', images=lj_images, form=form, zrimg=zk_images,
@@ -39,7 +40,7 @@ def pageinfo_(searchs):
     # house_info = []
     images = []
     web_id = []
-    zk_search = sql_zuke.query_likeall(searchs)  # 租客
+    zk_search = house.query_likeall(searchs)  # 租客
     if zk_search:
         search_len = len(zk_search)
         for le in range(search_len):
@@ -64,18 +65,18 @@ def terraces(name):
     terrace = request.args.get('terrace')  # 获取平台名
     terrace = terrace[1:-1]
     if terrace == '租客网':
-        zk_images = sql_zuke.query_img()  # 租客网图片
-        zk_house = sql_zuke.query_house()  # 租客网房源位置
-        zk_houseinfo = sql_zuke.query_houseinfo()  # 租客网房信息
-        zk_houseid = sql_zuke.query_houseid()  # 查id
+        zk_images = house.query_img()  # 租客网图片
+        zk_house = house.query_house()  # 租客网房源位置
+        zk_houseinfo = house.query_houseinfo()  # 租客网房信息
+        zk_houseid = house.query_houseid()  # 查id
         zklen = len(zk_images)
         return render_template('terraced_zk.html', zk_images=zk_images, zk_house=zk_house, zk_houseinfo=zk_houseinfo,
                                zk_houseid=zk_houseid, zklen=zklen, terrace=terrace)
     if terrace == '链家':
-        lj_images = sql_lj.query_img()  # tp
-        lj_house = sql_lj.query_house()  # wz
-        lj_houseinfo = sql_lj.query_houseinfo()  # 房子xx
-        lj_houseid = sql_lj.query_houseid()  # 房子id
+        lj_images = house.query_img()  # tp
+        lj_house = house.query_house()  # wz
+        lj_houseinfo = house.query_houseinfo()  # 房子xx
+        lj_houseid = house.query_houseid()  # 房子id
         ljlen = len(lj_house)
         ljimage = list(lj_images)
 
@@ -91,7 +92,7 @@ def regions(district):
     images = []
     webid = []
 
-    zkhome = sql_zuke.query_by_district(district)  # 租客
+    zkhome = house.query_by_district(district)  # 租客
     if zkhome != None:
         zklen = len(zkhome)
 
@@ -105,7 +106,7 @@ def regions(district):
             images.append(zkimgs)
             webid.append(zkid)
 
-    ljhome = sql_lj.query_by_district(district)  # 链家
+    ljhome = house.query_by_district(district)  # 链家
     if ljhome != None:
         ljlen = len(ljhome)
         for le in range(ljlen):
@@ -130,7 +131,7 @@ def regions(district):
 def houseinfo(table, hostid):
     if type(hostid) != str:
         if table == 'sql_lj':
-            ljid = sql_lj.query_by_id(hostid)
+            ljid = house.query_by_id(hostid)
             house = ljid[0].house  # 房子位置
             house_info = ljid[0].house_info  # 房子信息
             house_monthly = ljid[0].monthly  # 月租
@@ -141,7 +142,7 @@ def houseinfo(table, hostid):
                                    house_agent=house_agent,
                                    house_img=ljimg)
         elif table == 'sql_zuke':
-            zkid = sql_zuke.query_by_id(hostid)
+            zkid = house.query_by_id(hostid)
 
             zkhouse = zkid[0].house  # 房子位置
             zkmonthly = zkid[0].monthly  # 月租

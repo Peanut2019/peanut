@@ -1,10 +1,31 @@
+import datetime
+
 from sqlalchemy import or_
 from peanut.core.ext import db
+from enum import Enum
 
 
-class House(db.Model):
-    __tablename__ = 'house_table'
+class SourceEnum(Enum):
+    LJ = "lj"
+    ZK = 'zk'
+    KNOWN = 'known'
+
+
+class BaseModel(db.Model):
+    __tablename__ = 'base_table'
     id = db.Column(db.Integer, primary_key=True)
+    createAt = db.Column(db.DATETIME, default=datetime.datetime.now())
+
+
+class District(BaseModel):
+    __tablename__ = 'district_table'
+    city = db.Column(db.String(20), nullable=False)
+    name = db.Column(db.String(50), nullable=False)
+
+
+class House(BaseModel):
+    __tablename__ = 'house_table'
+    source = db.Column(db.Enum, default=SourceEnum.KNOWN.value)
     district = db.Column(db.String(1000), nullable=False)  # 区
     house = db.Column(db.String(1000), nullable=False)  # 房子位置
     monthly = db.Column(db.Integer, nullable=False)  # 月租 int

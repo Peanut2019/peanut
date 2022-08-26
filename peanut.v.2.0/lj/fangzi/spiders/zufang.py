@@ -5,7 +5,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import re
-from lj.fangzi.items import FangziItem
+from fangzi.items import FangziItem
 
 DATA = []
 

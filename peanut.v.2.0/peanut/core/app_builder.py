@@ -1,13 +1,6 @@
 from flask import Flask
 from flask import render_template
-from peanut.core.ext import bootstrap, db, api, migrate, jwt, cors
-
-
-# template_folder改为本地templates所在文件位置
-# app = Flask(__name__, template_folder=r'D:\PycharmProjects\Peanut\peanut\peanut.v.2.0\peanut\templates')
-# bootstrap = Bootstrap(app)
-#
-# app.secret_key = 'dfddddafdfasfasdfs'
+from peanut.core.ext import bootstrap, db, migrate, jwt, cors
 
 
 class BuildApp:
@@ -37,3 +30,8 @@ class BuildApp:
 
     def get_app(self):
         return self.app
+
+
+if __name__ == '__main__':
+    app = BuildApp().get_app()
+    app.run()
