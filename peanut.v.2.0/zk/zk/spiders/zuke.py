@@ -2,17 +2,20 @@
 import scrapy
 from zk.items import ZkItem
 
+
 class ZukeSpider(scrapy.Spider):
     name = 'zuke'
     allowed_domains = ['bj.zuke.com']
-    start_urls = ['https://bj.zuke.com/fang?district=&region=&line=&station=&bedroom=&rentstart=0&rentend=4000&characteristic=&decoration=&orientation=&search=']
+    start_urls = [
+        'https://bj.zuke.com/fang?district=&region=&line=&station=&bedroom=&rentstart=0&rentend=4000&characteristic=&decoration=&orientation=&search=']
 
     def parse(self, response):
         quyu_url = response.xpath("//div[@class='left']//a/@href")[1:17].getall()
         for i in quyu_url:
             for b in range(20):
-                yield scrapy.Request('https://bj.zuke.com'+i+'&page={}'.format(b),callback=self.two_parse)
-    def two_parse(self,response):
+                yield scrapy.Request('https://bj.zuke.com' + i + '&page={}'.format(b), callback=self.two_parse)
+
+    def two_parse(self, response):
         hou = []
         print('-----------------------------------------------------------1')
         # print(response.url)
@@ -23,15 +26,16 @@ class ZukeSpider(scrapy.Spider):
         for i in hou[0]:
             print('--------------------------------------------------------2')
             # print('https://bj.zuke.com'+i)
-            yield scrapy.Request('https://bj.zuke.com'+i,callback=self.three_parse)
-    def three_parse(self,response):
+            yield scrapy.Request('https://bj.zuke.com' + i, callback=self.three_parse)
+
+    def three_parse(self, response):
         item = ZkItem()
         item['url'] = response.url
         print('--------------------------------------------------3')
         print(response.url)
         district = response.xpath("//span[@class='c-333 left']/text()").getall()[0][2:4]
         # print(district)
-        district = ''.join(district)+'区'
+        district = ''.join(district) + '区'
         print(district)
         item['district'] = district
         house = response.xpath("//span[@class='c-333 left']/text()").getall()

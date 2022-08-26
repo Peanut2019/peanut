@@ -5,7 +5,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import re
-from fangzi.items import FangziItem
+from lj.fangzi.items import FangziItem
 
 DATA = []
 
@@ -64,8 +64,12 @@ class HouseSpider(scrapy.Spider):
         zhongjie_tel = response.xpath('//p[@id="phone1"]/text()').get()
         tel.append(zhongjie_tel)
         # zhongjie = dict(zip(zhongjie_name, tel))  # 中介
-        zhongjie = ' '.join(zhongjie_name) + ':' + ''.join(zhongjie_tel)  # 中介
-
+        print('bug',zhongjie_name)
+        print('bug',zhongjie_tel)
+        if zhongjie_tel:
+            zhongjie = ' '.join(zhongjie_name) + ':' + ''.join(zhongjie_tel)  # 中介
+        else:
+            zhongjie = zhongjie_name
         housePhotos = response.xpath('//ul[@id="prefix"]//li/img/@src').getall()  # 图片
         housePhotos = ' '.join(housePhotos)
         areas = response.meta['item']

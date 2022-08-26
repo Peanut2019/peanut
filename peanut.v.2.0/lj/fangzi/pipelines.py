@@ -53,6 +53,7 @@ class FangziPipeline(object):
 
 
 url = "mysql+pymysql://username:password@host:port/database_name?charset=utf8mb4"
+
 engine = create_engine(url, echo=False, encoding="utf-8")
 Base = declarative_base()
 metadata = MetaData(engine)
@@ -68,7 +69,8 @@ class WlcbCloudPipeline(object):
     def open_spider(self, spider):
         self.SessionClass = sessionmaker(bind=engine)  # 利用工厂模式获取SessionClass
         self.session_obj = self.SessionClass()  # 创建session对象,此时已绑定数据库引擎，但是未关联任何的对象模型
-        self.User_table = Table("Table_name", metadata, autoload=True)  #把table_name换成你的表名,autoload=True这个是关键
+        # self.User_table = Table("Table_name", metadata, autoload=True)  #把table_name换成你的表名,autoload=True这个是关键
+        self.User_table = Table("table", metadata, autoload=True)  #把table_name换成你的表名,autoload=True这个是关键
 
     def process_item(self, item, spider):
         self.session_obj.execute(self.User_table.insert(), [item])  # item是{"id":1,"name":"xxx"}

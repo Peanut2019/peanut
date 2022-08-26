@@ -1,12 +1,16 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import or_
-from peanut.core.apps import app
-from peanut.core.config import config
+from core.apps import app
+from core.config import config
 
+import pymysql
+
+pymysql.install_as_MySQLdb()
 users = config.DB_CONFIG
 app.config['SQLALCHEMY_DATABASE_URI'] = str(
     users["datatype"] + '://' + users['username'] + ':' + users['password'] + '@' + users['host'] + '/' + users[
         'database'])
+
 
 print(app.config.get("SQLALCHEMY_DATABASE_URI"))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

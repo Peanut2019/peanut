@@ -1,6 +1,6 @@
 from flask import render_template, request, url_for, redirect
-from peanut.core.apps import app
-import sql_lj, peanut_form, sql_zuke, sql_danke
+from core.apps import app
+import sql_lj, peanut_form, sql_zuke
 
 
 # 404处理
@@ -26,23 +26,17 @@ def homepage():
         lj_houseid = sql_lj.query_houseid()  # 房子id
         ljlen = len(lj_images)
 
-        danke_images = sql_danke.query_img()  # 蛋壳公寓图片
-        danke_house = sql_danke.query_house()  # 蛋壳公寓房源位置
-        danke_houseinfo = sql_danke.query_houseinfo()  # 蛋壳公寓房源信息
-        danke_houseid = sql_danke.query_houseid()  # 房子id
-        dklen = len(danke_images)
-
         zk_images = sql_zuke.query_img()  # 租客网图片
         zk_house = sql_zuke.query_house()  # 租客网房源位置
         zk_houseinfo = sql_zuke.query_houseinfo()  # 租客网房信息
         zk_houseid = sql_zuke.query_houseid()  # 查id
         zklen = len(zk_images)
 
-        return render_template('home_page.html', images=lj_images, form=form, dkimg=danke_images, zrimg=zk_images,
-                               ljhouse=lj_house, dankehouse=danke_house, zkhouse=zk_house,
-                               lj_houseinfo=lj_houseinfo, lj_houseid=lj_houseid, danke_houseid=danke_houseid,
-                               danke_houseinfo=danke_houseinfo, zk_houseinfo=zk_houseinfo, zk_houseid=zk_houseid,
-                               ljlen=ljlen, dklen=dklen, zklen=zklen)
+        return render_template('home_page.html', images=lj_images, form=form, zrimg=zk_images,
+                               ljhouse=lj_house, zkhouse=zk_house,
+                               lj_houseinfo=lj_houseinfo, lj_houseid=lj_houseid, zk_houseinfo=zk_houseinfo,
+                               zk_houseid=zk_houseid,
+                               ljlen=ljlen, zklen=zklen)
     else:
         if form.validate_on_submit():
             url_args = request.form['title']
@@ -68,31 +62,31 @@ def pageinfo_(searchs):
             houseinfo.append(zkhouseinfo)
             images.append(zkimgs)
             webid.append(zkid)
-    dksearch = sql_danke.query_likeall(searchs)  # danke
-    if dksearch != None:
-        searchlen = len(dksearch)
-        for le in range(searchlen):
-            dkhouse = dksearch[le].house  # 位置
-            dkhouseinfo = dksearch[le].house_info  # 信息
-            dkimgs = dksearch[le].imgs  # 图片
-            dkid = dksearch[le].id  # id
-            house.append(dkhouse)
-            houseinfo.append(dkhouseinfo)
-            images.append(dkimgs)
-            webid.append(dkid)
+    # dksearch = sql_danke.query_likeall(searchs)  # danke
+    # if dksearch != None:
+    #     searchlen = len(dksearch)
+    #     for le in range(searchlen):
+    #         dkhouse = dksearch[le].house  # 位置
+    #         dkhouseinfo = dksearch[le].house_info  # 信息
+    #         dkimgs = dksearch[le].imgs  # 图片
+    #         dkid = dksearch[le].id  # id
+    #         house.append(dkhouse)
+    #         houseinfo.append(dkhouseinfo)
+    #         images.append(dkimgs)
+    #         webid.append(dkid)
 
-    ljsearch = sql_danke.query_likeall(searchs)  # danke
-    if ljsearch != None:
-        searchlen = len(ljsearch)
-        for le in range(searchlen):
-            ljhouse = ljsearch[le].house  # 位置
-            ljhouseinfo = ljsearch[le].house_info  # 信息
-            ljimgs = ljsearch[le].imgs  # 图片
-            ljid = ljsearch[le].id  # id
-            house.append(ljhouse)
-            houseinfo.append(ljhouseinfo)
-            images.append(ljimgs)
-            webid.append(ljid)
+    # ljsearch = sql_danke.query_likeall(searchs)  # danke
+    # if ljsearch != None:
+    #     searchlen = len(ljsearch)
+    #     for le in range(searchlen):
+    #         ljhouse = ljsearch[le].house  # 位置
+    #         ljhouseinfo = ljsearch[le].house_info  # 信息
+    #         ljimgs = ljsearch[le].imgs  # 图片
+    #         ljid = ljsearch[le].id  # id
+    #         house.append(ljhouse)
+    #         houseinfo.append(ljhouseinfo)
+    #         images.append(ljimgs)
+    #         webid.append(ljid)
 
     if house == []:
         return render_template('404.html')
@@ -105,15 +99,6 @@ def pageinfo_(searchs):
 def terraces(name):
     terrace = request.args.get('terrace')  # 获取平台名
     terrace = terrace[1:-1]
-    if terrace == '蛋壳公寓':
-        danke_images = sql_danke.query_img()  # 蛋壳公寓图片
-        danke_house = sql_danke.query_house()  # 蛋壳公寓房源位置
-        danke_houseinfo = sql_danke.query_houseinfo()  # 蛋壳公寓房源信息
-        danke_houseid = sql_danke.query_houseid()  # 房子id
-        dklen = len(danke_images)
-        return render_template('terracedkj.html', terrace=terrace, dklen=dklen, danke_images=danke_images,
-                               danke_house=danke_house,
-                               danke_houseinfo=danke_houseinfo, danke_houseid=danke_houseid)
     if terrace == '租客网':
         zk_images = sql_zuke.query_img()  # 租客网图片
         zk_house = sql_zuke.query_house()  # 租客网房源位置
@@ -141,19 +126,19 @@ def regions(district):
     houseinfo = []
     images = []
     webid = []
-    dkhome = sql_danke.query_by_district(district)  # 蛋壳
-    if dkhome != None:
-        reslen = len(dkhome)
-        for le in range(reslen):
-            dkhouse = dkhome[le].house  # 位置
-            dkhouse_info = dkhome[le].house_info  # 信息
-            dkimgs = dkhome[le].imgs  # 图片
-            dkid = dkhome[le].id  # id
-
-            house.append(dkhouse)
-            houseinfo.append(dkhouse_info)
-            images.append(dkimgs)
-            webid.append(dkid)
+    # dkhome = sql_danke.query_by_district(district)  # 蛋壳
+    # if dkhome != None:
+    #     reslen = len(dkhome)
+    #     for le in range(reslen):
+    #         dkhouse = dkhome[le].house  # 位置
+    #         dkhouse_info = dkhome[le].house_info  # 信息
+    #         dkimgs = dkhome[le].imgs  # 图片
+    #         dkid = dkhome[le].id  # id
+    #
+    #         house.append(dkhouse)
+    #         houseinfo.append(dkhouse_info)
+    #         images.append(dkimgs)
+    #         webid.append(dkid)
 
     zkhome = sql_zuke.query_by_district(district)  # 租客
     if zkhome != None:
@@ -204,19 +189,19 @@ def houseinfo(table, hostid):
             return render_template('ljhouse_info.html', house=house, house_info=house_info, house_monthly=house_monthly,
                                    house_agent=house_agent,
                                    house_img=ljimg)
-        elif table == 'sql_danke':
-            dkid = sql_danke.query_by_id(hostid)
-            house_dk = dkid[0].house  # 房子位置
-            monthly_dk = dkid[0].monthly  # 租金
-            houseinfo_dk = dkid[0].house_info  # 房子信息
-            cfg_dk = dkid[0].cfg  # 配置
-            chum_dk = dkid[0].chum  # 室友
-            traffic_dk = dkid[0].traffic  # 交通
-            imgs_dk = dkid[0].imgs  # 图片
-            img = imgs_dk.split(' ')
-            return render_template('dkhouse_info.html', house_dk=house_dk, monthly_dk=monthly_dk,
-                                   houseinfo_dk=houseinfo_dk, cfg_dk=cfg_dk, chum_dk=chum_dk,
-                                   traffic_dk=traffic_dk, imgs_dk=img)
+        # elif table == 'sql_danke':
+        #     dkid = sql_danke.query_by_id(hostid)
+        #     house_dk = dkid[0].house  # 房子位置
+        #     monthly_dk = dkid[0].monthly  # 租金
+        #     houseinfo_dk = dkid[0].house_info  # 房子信息
+        #     cfg_dk = dkid[0].cfg  # 配置
+        #     chum_dk = dkid[0].chum  # 室友
+        #     traffic_dk = dkid[0].traffic  # 交通
+        #     imgs_dk = dkid[0].imgs  # 图片
+        #     img = imgs_dk.split(' ')
+        #     return render_template('dkhouse_info.html', house_dk=house_dk, monthly_dk=monthly_dk,
+        #                            houseinfo_dk=houseinfo_dk, cfg_dk=cfg_dk, chum_dk=chum_dk,
+        #                            traffic_dk=traffic_dk, imgs_dk=img)
         elif table == 'sql_zuke':
             zkid = sql_zuke.query_by_id(hostid)
 

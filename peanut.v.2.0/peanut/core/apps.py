@@ -2,7 +2,8 @@ from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask import render_template
 
-app = Flask(__name__)
+# template_folder改为本地templates所在文件位置
+app = Flask(__name__,template_folder=r'D:\PycharmProjects\Peanut\peanut\peanut.v.2.0\peanut\templates')
 bootstrap = Bootstrap(app)
 
 app.secret_key = 'dfddddafdfasfasdfs'

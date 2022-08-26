@@ -55,22 +55,22 @@
                 {% endfor %}
 
                 {# 蛋壳公寓 #}
-                {% for kd_img in range(3) %}
-
-                    <li>
-                        <div class="info_div">
-                            <a href="/houseinfo/{{ 'sql_danke' }}/{{ danke_houseid[kd_img] }}?house={{ danke_houseinfo[kd_img] }}"
-                               target="_blank">
-                                <img src={{ dkimg[kd_img] }}>
-                            </a>
-                            <br>
-                            <span>{{ dankehouse[kd_img] }}
-                            <br>
-                            蛋壳公寓房源
-                        </span>
-                        </div>
-                    </li>
-                {% endfor %}
+{#                {% for kd_img in range(3) %}#}
+{##}
+{#                    <li>#}
+{#                        <div class="info_div">#}
+{#                            <a href="/houseinfo/{{ 'sql_danke' }}/{{ danke_houseid[kd_img] }}?house={{ danke_houseinfo[kd_img] }}"#}
+{#                               target="_blank">#}
+{#                                <img src={{ dkimg[kd_img] }}>#}
+{#                            </a>#}
+{#                            <br>#}
+{#                            <span>{{ dankehouse[kd_img] }}#}
+{#                            <br>#}
+{#                            蛋壳公寓房源#}
+{#                        </span>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                {% endfor %}#}
                 {# 租客网 #}
                 {% for zr in range(3,6) %}
                     <li>
